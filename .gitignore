@@ -1,33 +1,38 @@
-# Gradle files
+# Приложение и промежуточные файлы сборки
+*.apk
+*.ap_
+*.aab
+*.dex
+*.class
+
+# Сгенерированные файлы
+bin/
+gen/
+out/
+
+# Каталоги сборки Gradle
 .gradle/
 build/
+*/build/
 
-# Local configuration file (sdk path, etc)
+# Локальные конфигурационные файлы
 local.properties
 
-# Log/OS Files
+# Proguard
+proguard/
+
+# Лог-файлы
 *.log
 
-# Android Studio generated files and folders
-captures/
-.externalNativeBuild/
-.cxx/
-*.apk
-output.json
-
-# IntelliJ
+# Android Studio/IntelliJ
+.idea/caches
+.idea/libraries
+.idea/modules.xml
+.idea/workspace.xml
 *.iml
-.idea/
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
 
-# Keystore files
-*.jks
-*.keystore
+# Gradle Wrapper (если необходимо, можно оставить, чтобы все имели одинаковую версию Gradle)
+gradle/wrapper/gradle-wrapper.jar
 
-# Google Services (e.g. APIs or Firebase)
-google-services.json
-
-# Android Profiling
-*.hprof
+# Captures (например, скриншоты, сделанные Android Studio)
+captures/
