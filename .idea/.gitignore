@@ -1,0 +1,38 @@
+# Приложение и промежуточные файлы сборки
+*.apk
+*.ap_
+*.aab
+*.dex
+*.class
+
+# Сгенерированные файлы
+bin/
+gen/
+out/
+
+# Каталоги сборки Gradle
+.gradle/
+build/
+*/build/
+
+# Локальные конфигурационные файлы
+local.properties
+
+# Proguard
+proguard/
+
+# Лог-файлы
+*.log
+
+# Android Studio/IntelliJ
+.idea/caches
+.idea/libraries
+.idea/modules.xml
+.idea/workspace.xml
+*.iml
+
+# Gradle Wrapper (если необходимо, можно оставить, чтобы все имели одинаковую версию Gradle)
+gradle/wrapper/gradle-wrapper.jar
+
+# Captures (например, скриншоты, сделанные Android Studio)
+captures/
