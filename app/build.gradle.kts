@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlinAndroid)
     alias(libs.plugins.kotlinKapt)
     alias(libs.plugins.hiltPlugin)
+    alias(libs.plugins.kotlinSerialization)
     alias(libs.plugins.ksp)
 }
 
@@ -53,6 +54,14 @@ dependencies {
     implementation(libs.androidx.material3)
     testImplementation(libs.junit)
 
+    // Room
+    implementation(libs.roomRuntime)
+    implementation(libs.roomKtx)
+    ksp(libs.roomCompiler)
+
+    // Kotlinx Serialization
+    implementation(libs.kotlinxSerializationJson)
+
     // Retrofit
     implementation(libs.retrofit)
 
@@ -80,4 +89,13 @@ dependencies {
 
 kapt {
     correctErrorTypes = true
+}
+
+kotlin {
+    // включаем плагин сериализации
+    sourceSets.all {
+        languageSettings.apply {
+            optIn("kotlinx.serialization.ExperimentalSerializationApi")
+        }
+    }
 }
